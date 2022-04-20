@@ -3,11 +3,11 @@ AITU WEB backend
 
 [sitemap](https://user-images.githubusercontent.com/72505048/164128868-c7512648-6e44-4ed4-a2d3-9b55f9bdc058.jpg)
 
-Интернет магазин, с различными товарами. 
+Internet shop with various goods.
 
-Не является маркетплейсом, поэтому пользователь - только клиент. 
+It is not a marketplace, so the user is only a client.
 
-Аналоги - Amazon, Wildberries. 
+Analogs - Amazon, Wildberries.
 
-Клиент может выбрать товар из представленных на начальной странице(реклама), воспользоваться поиском или выбрать товар из под категории, которую выберет сам. 
-Товар можно добавить в корзину. Для оплаты необходима авторизация. 
+The client can choose a product from those presented on the home page (advertising), use the search or select a product from a sub-category that he chooses.
+The product can be added to the shopping cart. Authorization is required for payment.
