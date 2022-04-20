@@ -1,7 +1,7 @@
 # backend!
 AITU WEB backend
 
-[photo_2022-04-20_07-23-08](https://user-images.githubusercontent.com/72505048/164128868-c7512648-6e44-4ed4-a2d3-9b55f9bdc058.jpg)
+[sitemap](https://user-images.githubusercontent.com/72505048/164128868-c7512648-6e44-4ed4-a2d3-9b55f9bdc058.jpg)
 
 Интернет магазин, с различными товарами. 
 
