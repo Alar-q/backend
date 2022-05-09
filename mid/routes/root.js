@@ -1,4 +1,4 @@
-let USD;
+let USD = 400;
 require('axios')
     .request({
         method: 'GET',
@@ -9,7 +9,8 @@ require('axios')
         }
     })
     .then(function (response) {
-        USD = Number.parseFloat(response.data.new_amount);
+        if(response.data.new_amount)
+            USD = Number.parseFloat(response.data.new_amount);
         console.log("usd to kzt:", USD);
     })
     .catch(function (error) {
