@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%-include('../layouts/header');-%>
+</head>
+
+<body>
+  <!-- Main navbar -->
+  <%-include('../layouts/navbar');-%>
+
+  <!-- DAUREN -->
+  <!-- ROUND-BODY -->
+  <div style="width:100%; height:1rem ; background-color:#142850; z-index:-1;">
+    <div style="background-color:white; border-radius:50px 50px 0 0; width:100%; height:100%;"></div>
+  </div>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <input type="text" id="mySearch" onkeyup="myFunction1()" placeholder="Поиск.." title="Type in a category">
+    <ul id="myMenu">
+    <li><a href="../pages/books.html">Книги</a></li>
+    <li><a href="../pages/electronics.html">Электроника</a></li>
+    <li><a href="../pages/pet.html">Зоотовары</a></li>
+    <li><a href="../pages/shoes.html">Обувь</a></li>
+    <li><a href="../pages/clothes.html">Одежда</a></li>
+    <li><a href="../pages/toys.html">Игрушки</a></li>
+    <li><a href="../pages/sport.html">Спорт</a></li>
+    <li><a href="../pages/hom.html">Дом</a></li>
+    <li><a href="../pages/furniture.html">Мебель</a></li>
+    <li><a href="../pages/health.html">Здоровье</a></li>
+    <li><a href="../pages/beauty.html">Красота</a></li>
+    </ul>
+    <div class="btn-group btn-group-toggle" data-toggle="buttons" style="padding: 20px 8px 20px 32px; align-self: flex-end;">
+      <label class="btn btn-outline-light active">
+        <input type="radio" name="options" id="option1" checked><i class="fas fa-sun" style="color:orange;"></i>
+      </label>
+      <label class="btn btn-outline-dark">
+        <input type="radio" name="options" id="option2"><i class="fas fa-moon"></i>
+      </label>
+    </div>
+
+  </div>
+
+
+  <main>
+    <section>
+      <div class="container py-5">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+            <div class="card shadow-2-strong" style="border-radius: 1rem;">
+              <div class="card-body p-5 text-center">
+
+                <h3 class="mb-5">Sign Up</h3>
+
+                <form action="/users" method="POST">
+                    <label class="form-label" for="username">Username</label>
+                    <input class="form-control form-control-lg" type="text" id="username" name="username"/>
+
+                    <label class="form-label" for="email">Email</label>
+                    <input class="form-control form-control-lg" type="text" id="email" name="email"/>
+
+                    <label class="form-label" for="password">Password</label>
+                    <input class="form-control form-control-lg" type="text" id="password" name="password"/>
+
+                    <br>
+
+                    <button class="btn btn-primary btn-lg btn-block" type="submit">
+                      Register
+                    </button>
+                </form>
+
+                <hr class="my-4">
+                <a href="/auth/login">
+                  <button class="btn btn-lg btn-block btn-primary" style="background-color:  #dd4b39;">Sign In
+                  </button>
+                </a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+   
+
+  <!-- ROUND-END-BODY -->
+  <div style="width:100%; height:1rem ; background-color:#142850; z-index:-1;">
+    <div style="background-color:white; border-radius: 0 0 50px 50px; width:100%; height:100%;"></div>
+  </div>
+
+
+  <!-- BEIBARYS -->
+  <!-- footer -->
+  <%-include('../layouts/footer');-%>>
+
+
+  <!--SCRIPTS-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <!-- DAUREN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="../assets/scripts/index.js" charset="utf-8"></script>
+  <!-- BEIBARYS -->
+  <script src="../assets/scripts/biba.js" charset="utf-8"></script>
+
+
+  <!-- ALAR -->
+  <script src="../assets/scripts/click.js"></script>
+  <script>setClickListener("/assets/sounds/click.mp3")</script>
+</body>
+
+</html>
