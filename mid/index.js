@@ -12,6 +12,10 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
+/* FILE UPLOAD (IMAGE) */
+const fileUpload = require('express-fileupload')
+app.use(fileUpload())
+
 
 /* MongoDB connect */
 const dbConfig = require('./config/database.config.js');
@@ -35,9 +39,9 @@ app.use('/address', require('./routes/address.js'));
 app.use('/gravityF_book', require('./routes/gravityF_book.js'));
 
 app.use('/auth', require('./routes/auth.js'));
+app.use('/users', require('./routes/users.js'));
 
-app.use('/users', require('./routes/UserRoute.js'));
-
+app.use('/product', require('./routes/product.js'));
 
 app.get('/notfound', (req, res)=>{res.render('notfound');});
 

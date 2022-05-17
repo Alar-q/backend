@@ -14,8 +14,8 @@ router.get('/delete', (req, res) => {
 router.get('/patch', (req, res) => {
   res.render('auth/patchUser');
 });
-
 router.get('/userAccount', (req, res) => {
   res.render('auth/userAccount');
 });
+
 module.exports = router;
