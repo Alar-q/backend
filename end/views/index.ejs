@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%-include('layouts/header');-%>
+</head>
+
+<body>
+  <!-- Main navbar -->
+  <%-include('layouts/navbar');-%>
+
+  <!-- DAUREN -->
+  <!-- ROUND-BODY -->
+  <div style="width:100%; height:1rem ; background-color:#142850; z-index:-1;">
+    <div style="background-color:white; border-radius:50px 50px 0 0; width:100%; height:100%;"></div>
+  </div>
+  <!-- DAUREN -->
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <input type="text" id="mySearch" onkeyup="myFunction1()" placeholder="Поиск.." title="Type in a category">
+    <ul id="myMenu">
+    <li><a href="./pages/books.html">Книги</a></li>
+    <li><a href="./pages/electronics.html">Электроника</a></li>
+    <li><a href="./pages/pet.html">Зоотовары</a></li>
+    <li><a href="./pages/shoes.html">Обувь</a></li>
+    <li><a href="./pages/clothes.html">Одежда</a></li>
+    <li><a href="./pages/toys.html">Игрушки</a></li>
+    <li><a href="./pages/sport.html">Спорт</a></li>
+    <li><a href="./pages/hom.html">Дом</a></li>
+    <li><a href="./pages/furniture.html">Мебель</a></li>
+    <li><a href="./pages/health.html">Здоровье</a></li>
+    <li><a href="./pages/beauty.html">Красота</a></li>
+    </ul>
+    <div class="btn-group btn-group-toggle" data-toggle="buttons" style="padding: 20px 8px 20px 32px; align-self: flex-end;">
+    <label class="btn btn-outline-light active">
+      <input type="radio" name="options" id="option1" checked><i class="fas fa-sun" style="color:orange;"></i>
+    </label>
+    <label class="btn btn-outline-dark">
+      <input type="radio" name="options" id="option2"><i class="fas fa-moon"></i>
+    </label>
+  </div>
+
+</div>
+
+
+  <!-- ALAR -->
+        <header class="bg-light py-5">
+                <div class="text-center text-dark">
+                  <h1 class="display-4 fw-bolder pDecrip live_text"> Добро пожаловать на Amazing</h1>
+                  <p class="lead fw-normal text-dark-50 pDecripText">
+                        Современный интернет-магазин для тех кто ищет аксессуары для животных,
+                        книги, электроники и многие другие интересные товары. Доставка по всему Казахстану!
+                  </p>
+                  <div class="pDecripText">
+                    <section id="features">
+                      <div class="row">
+                        <div class="col-lg-4 feature-box">
+                          <i class="fa fa-address-book-o fa-4x icon" aria-hidden="true"></i>
+                          <h3>3,5 млн+</h3>
+                          <p>заказов в день</p>
+                        </div>
+                        <div class="col-lg-4 feature-box">
+                          <i class="fa fa-product-hunt fa-4x icon" aria-hidden="true"></i>
+                          <h3>225 млн+</h3>
+                          <p>товаров на складе</p>
+                        </div>
+                        <div class="col-lg-4 feature-box">
+                          <i class="fa fa-black-tie fa-4x icon" aria-hidden="true"></i>
+                          <h3>210 тыс+</h3>
+                          <p>брендов на сайте</p>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                  <!-- BOXES -->
+                  <div class="container">
+                    <div class="pDecripText" style="margin: 0;">
+                        <h1 style="text-align: center;">Наши преимущества</h1>
+                        <div class="row" id="benefits"></div>
+                    </div>
+                  </div>
+                </div>
+
+
+        </header>
+  <!-- ALAR -->
+  <!-- body -->
+  <main>
+    <section id="main_body">
+      <!-- CAROUSEL -->
+      <div class="container-fluid myCarousel" style="padding:1rem 2rem;">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+          <ol class="carousel-indicators" id="mycaroInd">
+          </ol>
+          <div class="carousel-inner" id="mycaro">
+          </div>
+
+          <button id="caroPrevBtn"class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </button>
+          <button id="caroNextBtn" class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- BOXES -->
+      <div class="container" style="margin-top: 5rem;">
+        <div class="row" id="presents">
+
+        </div>
+      </div>
+
+      <!-- LIST -->
+      <div id="karlsson" style="margin: 5rem 0rem 0rem 0rem;">
+        <h1 style="text-align: center; margin-bottom: 2rem;">Хиты продаж</h1>
+      </div>
+
+      <!-- BOXES -->
+      <div class="container" style="margin-top: 0rem;">
+        <div class="row" id="presents2"></div>
+      </div>
+
+      <!-- LIST -->
+      <div id="karlsson2" style="margin: 5rem 0rem 0rem 0rem;">
+        <h1 style="text-align: center; margin-bottom: 2rem;">Может быть интересно</h1>
+      </div>
+    </section>
+  </main>
+
+
+  <!-- ROUND-END-BODY -->
+  <div style="width:100%; height:1rem ; background-color:#142850; z-index:-1;">
+    <div style="background-color:white; border-radius: 0 0 50px 50px; width:100%; height:100%;"></div>
+  </div>
+
+
+  <!-- BEIBARYS -->
+  <!-- footer -->
+  <%-include('layouts/footer');-%>>
+
+
+  <!--SCRIPTS-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <!-- DAUREN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="/assets/scripts/index.js" charset="utf-8"></script>
+  <!-- BEIBARYS -->
+  <script src="/assets/scripts/biba.js" charset="utf-8"></script>
+
+
+  <!-- ALAR -->
+  <script src="/assets/scripts/click.js"></script>
+  <script>setClickListener("/assets/sounds/click.mp3")</script>
+
+  <script src="/assets/scripts/adapcarousel.js"></script>
+  <script src="/assets/scripts/caro.js"></script>
+  <script src="/assets/scripts/grido.js"></script>
+  <script src="/assets/scripts/home.js"></script>
+  <script>
+      const toKZT = (inUSD) => {
+          return parseInt(inUSD * <%-usd%>);
+      }
+      const contentHolder = new ContentHolder();
+      contentHolder.addContent("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-silver-select-201810?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1633027804000", "MacBook Pro M1", `1499$ ${toKZT(1499)}kzt`, "./pages/productForBeiba.html");
+      contentHolder.addContent("./assets/img/items/sales/2.png",  "Щетка кухонная", `2.99$ ${toKZT(2.99)}kzt`);
+      contentHolder.addContent("./assets/img/items/sales/3.png", "Фитнес-браслет", `33.99$ ${toKZT(33.99)}kzt`);
+      contentHolder.addContent("./assets/img/items/sales/4.png", "Угловая шлиф...", `39.90$ ${toKZT(39.90)}kzt`);
+      contentHolder.addContent("./assets/img/items/booksPar/5.png", "Гравити фолз", `5.90$ ${toKZT(5.90)}kzt`, "gravityF_book");
+      contentHolder.addContent("./assets/img/items/sales/6.png", "Автокресло дет...", `59.90$ ${toKZT(59.90)}kzt`);
+
+      const carousel = new AdaptiveCarousel(contentHolder);
+
+      const cont = document.getElementById("karlsson");
+      cont.appendChild(carousel.element);
+
+
+      const contentHolder2 = new ContentHolder();
+      contentHolder2.addContent("./assets/img/items/zooDogs/3.png", "Поводок рулетка", `${toKZT(3.99)}kzt`, "productForDaur");
+      contentHolder2.addContent("./assets/img/items/interesting/2.png",  "Колонка JBL", `${toKZT(29.99)}kzt`);
+      contentHolder2.addContent("./assets/img/items/interesting/3.png", "Кофемашина EP4", `${toKZT(63.99)}kzt`);
+      contentHolder2.addContent("./assets/img/items/interesting/4.png", "Видеокарта Nvidia", `${toKZT(1200.90)}kzt`);
+      contentHolder2.addContent("./assets/img/items/interesting/5.png", "Медиаплеер Xiomi", `${toKZT(35.90)}kzt`);
+
+      const carousel2 = new AdaptiveCarousel(contentHolder2);
+
+      const cont2 = document.getElementById("karlsson2");
+      cont2.appendChild(carousel2.element);
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%-include('../layouts/header');-%>
+</head>
+
+<body>
+  <!-- Main navbar -->
+  <%-include('../layouts/navbar');-%>
+
+  <!-- DAUREN -->
+  <!-- ROUND-BODY -->
+  <div style="width:100%; height:1rem ; background-color:#142850; z-index:-1;">
+    <div style="background-color:white; border-radius:50px 50px 0 0; width:100%; height:100%;"></div>
+  </div>
+
+  <%-include('../layouts/menu')%>
+
+
+  <main>
+    <section>
+      <div class="container py-5">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+            <div class="card shadow-2-strong" style="border-radius: 1rem;">
+              <div class="card-body p-5 text-center">
+
+                <h3 class="mb-5">Change password</h3>
+                <form action="/auth/patch" method="POST">
+                  <label class="form-label" for="old_username">Old Username</label>
+                  <input type="text" id="old_username" class="form-control form-control-lg" name="old_username"/>
+
+                  <label class="form-label" for="new_username">New Username</label>
+                  <input type="text" id="new_username" class="form-control form-control-lg" name="new_username"/>
+
+                  <br>
+
+                  <button class="btn btn-primary btn-lg btn-block" type="submit">Change</button>
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+   
+
+  <!-- ROUND-END-BODY -->
+  <div style="width:100%; height:1rem ; background-color:#142850; z-index:-1;">
+    <div style="background-color:white; border-radius: 0 0 50px 50px; width:100%; height:100%;"></div>
+  </div>
+
+
+  <!-- BEIBARYS -->
+  <!-- footer -->
+  <%-include('../layouts/footer');-%>>
+
+
+  <!--SCRIPTS-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <!-- DAUREN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="../assets/scripts/index.js" charset="utf-8"></script>
+  <!-- BEIBARYS -->
+  <script src="../assets/scripts/biba.js" charset="utf-8"></script>
+
+
+  <!-- ALAR -->
+  <script src="../assets/scripts/click.js"></script>
+  <script>setClickListener("/assets/sounds/click.mp3")</script>
+</body>
+
+</html>
