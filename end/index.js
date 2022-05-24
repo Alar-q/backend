@@ -28,6 +28,10 @@ app.use(bodyParser.json());
 const fileUpload = require('express-fileupload')
 app.use(fileUpload())
 
+/* override with POST having ?_method=PUT */
+const methodOverride = require('method-override')
+app.use(methodOverride('_method'))
+
 // Global variable is visible from ejs too
 global.userLoggedIn = false;
 app.use('*', (req, res, next)=>{
@@ -49,6 +53,13 @@ mongoose.connect(dbConfig.url, {useNewUrlParser: true})
 		process.exit();
 	});
 
+/* Swagger */
+const swaggerDocs = require('./myswagger');
+const swaggerUI = require('swagger-ui-express');
+app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocs));
+console.log(swaggerDocs);
+
+/* Routes */
 
 app.use('/', require('./routes/root.js'));
 app.use('/home', require('./routes/root.js'));
@@ -61,6 +72,7 @@ app.use('/auth', require('./routes/auth.js'));
 app.use('/product', require('./routes/product.js'));
 
 app.get('/fail', (req, res)=> res.send('something went wrong'));
+
 
 
 app.listen(PORT, () => {

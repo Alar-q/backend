@@ -6,18 +6,19 @@ const ProductSchema = new mongoose.Schema({
 		required: true,
 		unique: true,
 	},
-	username: {
-		type: String, 
-		required: true,
-	},	
 	title: {
 		type: String, 
 		required: true,
+		unique: true,
 	},	
 	body: {
 		type: String, 
 		required: true,
-	},	
+	},
+	// userId: {
+	// 	type: String,
+	// 	required: true,
+	// },
 });
 
 const Product = new mongoose.model('Product', ProductSchema);

@@ -11,7 +11,7 @@ exports.patch_form = (req, res) => {
 };
 
 exports.delete_form = (req, res) => {
-	res.render('auth/delete_form');
+	res.render('auth/delete_form.ejs');
 };
 
 exports.logout = (req, res) => {
