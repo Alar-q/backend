@@ -60,20 +60,6 @@ exports.get = (req, res)=>{
 	});
 };
 
-// exports.get_one = (req, res)=> {
-// 	console.log("params", req.params);
-// 	ProductModel.find({
-// 		title: req.params.title,
-// 	}, (err, products)=>{
-// 		if(products)
-// 			res.status(200).json({products})
-// 		else
-// 			res.status(204).json({message: 'something went wrong'})
-// 	});
-// }
-
-
-
 
 exports.delete = (req, res) => {
 	ProductModel.findOneAndRemove({title: req.body.title}, (err, removed)=>{
@@ -104,5 +90,19 @@ exports.patch = (req, res) => {
 			}else{
 				res.status(204).json({message: 'something went wrong'});
 			}
+	});
+};
+
+
+exports.show_all = (req, res)=>{
+	// const ob = {};
+	// if(req.params.title)
+		// ob.title = req.params.title;
+
+	ProductModel.find({}, (err, products)=>{
+		if(products)
+			res.status(200).render('product/view_products', {products});
+		else
+			res.status(204).json({message: 'something went wrong'})
 	});
 };

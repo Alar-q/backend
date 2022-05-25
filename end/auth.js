@@ -11,7 +11,7 @@ passport.use(new LocalStrategy({passReqToCallback: true},
         UserModel.findOne({username})
             .then((user) => {
                 // email is required, but for some strategies not? idk
-                if (!user || req.body.email) {
+                if (!user) {
                     bcrypt.hash(req.body.password, 10, function(err, hash) {
                         const newUser = {
                             username: req.body.username, // то что не нашлось пользователей под ником, значит username is unique

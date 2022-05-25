@@ -85,9 +85,22 @@ router.patch('/', controller.patch);
 
 /**
  * @swagger
+ * /product/show_all:
+ *      get:
+ *          description: Returns HTML file with all products
+ *          responses:
+ *              '200':
+ *                  description: Success
+ *              '204':
+ *                  description: No content
+ */
+router.get('/show_all', controller.show_all);
+
+/**
+ * @swagger
  * /product/:title:
  *      get:
- *          description: Return one product
+ *          description: Return one product by title
  *          responses:
  *              '200':
  *                  description: Success
