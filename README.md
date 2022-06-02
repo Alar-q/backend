@@ -1,7 +1,7 @@
 # backend!
 AITU WEB backend
 
-https://radiant-ridge-48389.herokuapp.com/
+https://shopamazing.herokuapp.com/
 
 ![sitemap](https://user-images.githubusercontent.com/72505048/164172069-9528537a-a4a3-47f6-ad62-20cc4a43749f.jpg)
 
