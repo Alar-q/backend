@@ -78,7 +78,7 @@ exports.patch = (req, res) => {
 			title: req.body.title
 		},
 		{
-			title: req.body.title,
+			title: req.body.new_title,
 			body: req.body.body
 		},
 		{

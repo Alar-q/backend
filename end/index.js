@@ -54,7 +54,7 @@ mongoose.connect(dbConfig.url, {useNewUrlParser: true})
 	});
 
 /* Swagger */
-const swaggerDocs = require('./myswagger');
+const swaggerDocs = require('./swagger.json');
 const swaggerUI = require('swagger-ui-express');
 app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocs));
 console.log(swaggerDocs);

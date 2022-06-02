@@ -1,0 +1,184 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Amazing shop",
+    "description": "Amazing's API",
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "product",
+      "description": "API for products"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/product": {
+      "get": {
+        "tags": ["product"],
+        "summary": "Find all products in the system",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/product"
+            }
+          },
+          "204": {
+            "description": "Something went wrong"
+          }
+        }
+      },
+
+      "post": {
+        "tags": ["product"],
+        "description": "Create new product in system",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "product",
+            "in": "body",
+            "description": "Product that we want to create",
+            "schema": {
+              "$ref": "#/definitions/product"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/product"
+              }
+            }
+          }
+        },
+        "summary": "Create new Product",
+        "responses": {
+          "201":{
+            "description": "Product created",
+            "schema": {
+              "$ref": "#/definitions/product"
+            }
+          },
+          "400": {
+            "description": "Bad request, content can not be empty"
+          },
+          "500": {
+            "description": "Server error, something went wrong"
+          }
+        }
+      },
+
+      "patch": {
+        "tags": ["product"],
+        "description": "Update product",
+        "parameters": [
+          {
+            "name": "product",
+            "in": "body",
+            "description": "change title and/or body part/parts",
+            "schema": {
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "new title": {
+                  "type": "string"
+                },
+                "new body": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "produces": ["application/json"],
+        "summary": "Patch product fields",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/product"
+            }
+          },
+          "204": {
+            "description": "Product not found"
+          }
+        }
+      },
+
+      "delete": {
+        "tags": ["product"],
+        "description": "Delete product",
+        "parameters": [
+          {
+            "name": "product",
+            "in": "body",
+            "description": "delete by title",
+            "schema": {
+              "properties": {
+                "title": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "summary": "Delete a product",
+        "responses": {
+          "200": {
+            "description": "OK. Returns removed product",
+            "schema": {
+              "$ref": "#/definitions/product"
+            }
+          },
+          "204": {
+            "description": "Product not found"
+          }
+        }
+      }
+    }
+
+  },
+  "definitions": {
+    "product": {
+      "required": [
+        "image",
+        "title",
+        "body"
+      ],
+      "properties": {
+        "image": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "body": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
+
+
